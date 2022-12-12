@@ -33,6 +33,14 @@ void pop(TP *p){
     }
 }
 
+void imprime(TP *p){
+    if (p->top != 0){
+        for (int i = p->top-1; i >= 0; --i){
+            printf("%d\n",p->vet[i]);
+        }
+    }
+}
+
 void libera(TP *p){
   free(p->vet);
   free(p);

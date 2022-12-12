@@ -25,6 +25,14 @@ void insere(Fila *f, int x){
   f->n++;
 }
 
+void imprime(Fila *f){
+  if (f->n != 0){
+    for (int i = 0; i < f->n; i++){
+      printf("%d\n",f->vet[i]);
+  }
+ }
+}
+
 void retira(Fila *f){
   if (f->n == 0){exit(1);}; // vazia
   int y = 0;
