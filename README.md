@@ -1,6 +1,6 @@
 # Data Structures and Algorithms in `C` & `Java`
 
-> LANGUAGE, CONSISTENCY in PRACTICE & COMPETETION
+> LANGUAGE, CONSISTENCY in PRACTICE & COMPETITION
 
 ## Structures 
 - [x] ASL - Arrays, Strings, Lists
