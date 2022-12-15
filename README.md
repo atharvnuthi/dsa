@@ -3,7 +3,7 @@
 > LANGUAGE, CONSISTENCY in PRACTICE & COMPETITION
 
 ## Structures 
-- [] ASL - Arrays, Strings, Lists
+- [ ] ASL - Arrays, Strings, Lists
 - [x] LQS - Linked Lists, Queues, Stacks
 - [ ] THG - Trees & Heap, Hash, Graphs 
 ```
