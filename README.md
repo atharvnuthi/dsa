@@ -7,7 +7,7 @@
 - [x] LQS - Linked Lists, Queues, Stacks
 - [ ] THG - Trees & Heap, Hash, Graphs 
 ```
-Initialization
+Initialization / Creation 
 Insertion (head & tail)
 Deletion (specific, head & tail)
 Clear (free)
