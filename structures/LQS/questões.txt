@@ -1,0 +1,55 @@
+// uso de recursividade, pilhas/filas, listas encadeadas, e suas funções básicas --> para intercalar ou alternar
+// resolução somente com a lógica
+
+// Questão 1 
+
+/* 
+typedef struct lse{ int info;
+                    struct lse * prox;
+                   }TLSE;
+
+TLSE * TLSE_intercalar(TLSE* l1, TLSE *l2){
+    if (!l1 && !l2){
+        return NULL;
+    }
+    else if (l1 && !l2){
+        return l1;
+    }
+    else if (l2 && !l1){
+        return l2;
+    }
+    else{
+        TLSE * aux = l1->prox;
+        l1->prox = l2;
+        l2->prox =  TLSE_intercalar(aux,l2->prox);
+        return l1;
+    }
+} /*/
+
+
+// Questão 2 
+
+/*
+typedef struct pilha{int dim; //tam
+                     int *p;
+                     int n; //topo
+                     }TPilha;
+
+void alternar(TPilha * p){
+    TPilha *aux = pilha_criar(10);
+    while (!pilha_verificar_vazia(p)){
+        pilha_empilhar(aux,pilha_desempilhar(p));
+    };
+
+    while(!pilha_verificar_vazia(aux)){
+        int a,b;
+        a = pilha_desempilhar(aux);
+        if (!pilha_verificar_vazia(aux)){
+            b = pilha_desempilhar(aux);
+        }
+        pilha_empilhar(p,b);
+        pilha_empilhar(p,a);
+    }
+}
+/*/
+
