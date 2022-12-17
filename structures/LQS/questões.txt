@@ -2,6 +2,10 @@
 // resolução somente com a lógica
 
 // Questão 1 
+1) Dadas duas listas simplesmente encadeadas l1 e l2, implemente uma função recursiva intercalar(TLSE *l1, TLSE *l2), 
+que encadeia de forma alternada os nós de l1 e l2 e retorna um ponteiro para o início da lista resultante. 
+O primeiro nó deve vir da lista 1, caso não seja nulo. 
+Se uma das listas for menor que a outra, o restante dos nós da maior lista deve ser encadeado ao final da intercalação. 
 
 /* 
 typedef struct lse{ int info;
@@ -30,6 +34,12 @@ TLSE * TLSE_intercalar(TLSE* l1, TLSE *l2){
 
 
 // Questão 2 
+Considere uma pilha de inteiros p contendo um número par de elementos. 
+Implemente uma função void alternar, que troca dois elementos consecutivos da pilha sem acessar a estrutura interna, 
+isto é, utilizando apenas as operações:
+- int vazia
+- void push
+- int pop
 
 /*
 typedef struct pilha{int dim; //tam
@@ -55,3 +65,84 @@ void alternar(TPilha * p){
 }
 /*/
 
+
+// Questão 3
+Dadas duas listas duplamente encadeadas l1 e l2 de cadeias de caracteres.
+Escreva a função TLDE * insere_lista_apos_string(TLDE *l1, TLDE *l2, char *s),
+que insere l2 após o nó de l1 que contenha a primeira ocorrência de s. 
+Se l1 for nula, ou não contiver s, nada deve ser feito. 
+
+TLDE *insere(TLDE *l1, TLDE *l2, char *s){
+    if (!l1 || !l2){ return l1; }
+    else {
+        TLDE *q = busca(l1,s);
+        if(!q){ return l1; };
+        q->prox = l2;
+        l2->ant = q; 
+        return l1; 
+    }
+}
+
+
+// Questão 4 
+Dadas duas listas simples, não nulas e de tamanho par, implemente uma função void cross_over(TLSE *l1, TLSE *l2), 
+que faça o último nó da primeira metade de l1 apontar para o primeiro nó da segunda metade de l2, 
+e que também faça o último nó da primeira metade de l2 apontar para o primeiro nó da segunda metade de l1.
+
+void cross_over(TLSE *l1, TLSE *l2){
+    int t1 = tamanho(l1);
+    int t2 = tamanho(l2);
+    TLSE *p = l1;
+    TLSE *q = l2; 
+    for (int i = 0; i < t1-1; ++i){ p = p->prox; };
+    for (int j = 0; j < t2-1; ++j){ q = q->prox; };
+    TLSE *r = p->prox;
+    p->prox = q->prox;
+    q->prox = r;
+}
+
+// Questão 5 
+Utilizando no máximo 2 pilhas auxiliares, implemente uma função TP * troca(TP *p) , 
+que troque a segunda metade de uma pilha com a primeira metade de lugar.
+Suponha que o número de elementos seja par. Somente devem ser usadas as funções que definem o tipo abstrato de dados conforme abaixo:
+- void push(TP *p, int elem);
+- int pop(TP *p);
+- int vazia(TP *p);
+- TP *inicializa();
+- void libera(TP *p);
+- void imprime(TP *p);
+
+TP *p = [5,4,3,2,1,0]
+// para [2,1,0,5,4,3]
+
+TP *troca(TP *p){
+    TP *aux1 = inicializa();
+    TP *aux2 = inicializa();
+    int n = 0;
+
+    while(!vazia(p)){
+        push(aux1,pop(p));
+        n++;
+    }; // aux1 = [0,1,2,3,4,5] , aux2 = []
+
+    for (int i = 0; i < n/2; i++){
+        push(p,pop(aux1));
+    }; // aux1 = [0,1,2] , p = [5,4,3] , aux2 = []
+
+    while(!vazia(p)){
+        push(aux2,pop(p));
+    }; // aux2 = [3,4,5] , aux1 = [0,1,2] , p = []
+
+    while(!vazia(aux1)){
+        push(p,pop(aux1));
+    }; // p = [2,1,0] , aux1 = [] , aux2 = [3,4,5]
+
+    while(!vazia(aux2)){
+        push(p,pop(aux2));
+    }; // p = [2,1,0,5,4,3] , aux1 = [] , aux2 = []
+
+    libera(aux1);
+    libera(aux2);
+
+    return p;
+}
