@@ -20,8 +20,10 @@ TLSE * TLSE_intercalar(TLSE* l1, TLSE *l2){
     }
     else{
         TLSE * aux = l1->prox;
+        TLSE * aux1 = l2 -> prox;
         l1->prox = l2;
-        l2->prox =  TLSE_intercalar(aux,l2->prox);
+        l2->prox =  aux;
+        intercalar(aux,aux1);
         return l1;
     }
 } /*/
