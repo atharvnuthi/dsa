@@ -34,7 +34,6 @@ void imprime(Fila *f){
 }
 
 void retira(Fila *f){
-  if (f->n == 0){exit(1);}; // vazia
   int y = 0;
   while (y != f->n-1){
     f->vet[y] = f->vet[y+1];
