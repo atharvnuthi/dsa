@@ -90,8 +90,8 @@ que faça o último nó da primeira metade de l1 apontar para o primeiro nó da 
 e que também faça o último nó da primeira metade de l2 apontar para o primeiro nó da segunda metade de l1.
 
 void cross_over(TLSE *l1, TLSE *l2){
-    int t1 = tamanho(l1);
-    int t2 = tamanho(l2);
+    int t1 = tamanho(l1)/2;
+    int t2 = tamanho(l2)/2;
     TLSE *p = l1;
     TLSE *q = l2; 
     for (int i = 0; i < t1-1; ++i){ p = p->prox; };
