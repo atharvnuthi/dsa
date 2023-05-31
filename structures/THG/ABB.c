@@ -121,7 +121,7 @@ ABB *retirar(ABB *a, int val)
                 filho = filho->dir;               // until I find largest value
             a->val = filho->val;                  // filho -> nó
             filho->val = val;                     // nó -> filho
-            a->esq = remover(a->esq, filho->val); // remover o filhó
+            a->esq = retirar(a->esq, filho->val); // remover o filhó
         }
     }
     return a;
