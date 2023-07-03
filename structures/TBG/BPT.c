@@ -2,9 +2,9 @@
 
 typedef struct BPT
 {
-    int nKeys, *aKeys;         // number of keys filled, array of keys
-    int leaf;                  // is leaf or not
-    struct BPT *childs, *prox; // children pointers, prox pointer for leafs only (linked list)
+    int nKeys, *aKeys;          // number of keys filled, array of keys
+    int leaf;                   // is leaf or not
+    struct BPT **childs, *prox; // children pointers (array of pointers), prox pointer for leafs only (linked list)
 } BPT;
 
 BPT *inicializar()

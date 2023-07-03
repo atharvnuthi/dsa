@@ -1,13 +1,14 @@
 # Data Structures and Algorithms in `C` & `Java`
 
 > LANGUAGE, CONSISTENCY in PRACTICE & COMPETITION
+> [Notion](https://atharvnuthi.notion.site/12a9cc5fbd2b4ff98b2a00d9043bec91)
 
 ## Structures
 
 - [x] ASL - Arrays, Strings, Lists
 - [x] LQS - Linked Lists, Queues, Stacks
 - [x] TBG - Trees, B-Trees, Graphs
-- [ ] HH - Hash, Heaps
+- [x] HH - Hash, Heaps
 
 ```
 Initialization / Creation
