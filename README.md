@@ -2,8 +2,6 @@
 
 > LANGUAGE, CONSISTENCY in PRACTICE & COMPETITION
 
-[Notion](https://atharvnuthi.notion.site/12a9cc5fbd2b4ff98b2a00d9043bec91)
-
 ## Structures
 
 - [x] ASL - Arrays, Strings, Lists
