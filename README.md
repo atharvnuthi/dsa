@@ -13,8 +13,7 @@
 
 ```
 Initialization / Creation
-Insertion (head & tail)
-Deletion (specific, head & tail)
+Insertion / Deletion
 Clear (free)
 Traversal (Search, Print, Sort)
 ```
