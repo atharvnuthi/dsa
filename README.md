@@ -1,4 +1,4 @@
-# Data Structures and Algorithms in `C` & `Java`
+# Data Structures and Algorithms in `C`
 
 > LANGUAGE, CONSISTENCY in PRACTICE & COMPETITION
 
