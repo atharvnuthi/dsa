@@ -64,13 +64,13 @@ void max_heapify(int a[], int i, int n)
     int largest = i;
 
     // check if the left node is larger than the current node
-    if (left <= n && a[left] > a[largest])
+    if (left < n && a[left] > a[largest])
     {
         largest = left;
     }
 
     // check if the right node is larger than the current node
-    if (right <= n && a[right] > a[largest])
+    if (right < n && a[right] > a[largest])
     {
         largest = right;
     }
