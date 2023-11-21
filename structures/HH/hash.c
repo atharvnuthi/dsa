@@ -28,8 +28,10 @@ A *busca(TH th, int mat)
 {
     int h = hash(mat);
     A *p = th[h];
-    while ((p) && (p->mat != mat))
+    while ((p) && (p->mat < mat))
         p = p->prox;
+    if((!p) || (p->mat > mat))
+        return NULL;
     return p;
 }
 
