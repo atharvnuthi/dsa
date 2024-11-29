@@ -1,7 +1,5 @@
 # Data Structures and Algorithms in `C`
 
-> LANGUAGE, CONSISTENCY in PRACTICE & COMPETITION
-
 ## Structures
 
 - [x] ASL - Arrays, Strings, Lists
@@ -18,19 +16,20 @@ Traversal (Search, Print, Sort)
 
 ## Time & Space Complexity, Big O
 
+- Complexity
+- Big O Notation
+- Optimal Algorithms
+
 ## Algorithms
 
 - Pointers
-- Sorting & its varieties to improve efficiency
-  - Basics: Insertion, Bubble, Selection
+- Sorting & its varieties to improve efficiency (Insertion, Bubble, Selection)
 - Searching
 - Recursion & Backtracking
 - Brute Force
 - Divide & Conquer
-- Hashing
-- String Algorithms
-- Randomized
-- Greedy
 - Dynamic
-
-## Real-Life Applications & Examples
+- Greedy
+- String Algorithms
+- Hashing
+- Randomized
