@@ -1,4 +1,4 @@
-# Data Structures and Algorithms in `C`
+# Data Structures and Algorithms
 
 ## Structures
 
@@ -23,13 +23,13 @@ Traversal (Search, Print, Sort)
 ## Algorithms
 
 - Pointers
-- Sorting & its varieties to improve efficiency (Insertion, Bubble, Selection)
+- Sorting
 - Searching
 - Recursion & Backtracking
 - Brute Force
 - Divide & Conquer
-- Dynamic
-- Greedy
+- Dynamic Programming
+- Greedy Algorithms
 - String Algorithms
 - Hashing
 - Randomized
